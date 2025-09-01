@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divulga Links Kiwify - Garantia de 5 Vendas por Apenas R$15,00</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff4e00;
+            --primary-dark: #e04400;
+            --secondary: #2e0fff;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--dark), var(--secondary));
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(46,15,255,0.1) 0%, rgba(255,78,0,0.1) 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: var(--gray);
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 78, 0, 0.4);
+            margin: 20px 0;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 78, 0, 0.5);
+        }
+        
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--success);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(46,15,255,0.05) 0%, rgba(255,78,0,0.05) 100%);
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .step-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 700;
+            margin-right: 15px;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(46,15,255,0.05) 0%, rgba(255,78,0,0.05) 100%);
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            background-color: white;
+            display: none;
+        }
+        
+        .faq-active .faq-answer {
+            display: block;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            color: white;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="https://static.cdnlogo.com/logos/k/40/kiwify_800.png" alt="Kiwify Logo">
+                <h1>Divulga Links Kiwify</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Divulgue seu link da <span>Kiwify</span> e garanta <span>5 vendas</span> por apenas</h1>
+            <div class="price">
+                <span class="old-price">R$ 97,00</span>
+                <span>R$ 15,00</span>
+            </div>
+            <p>Chega de gastar com anúncios caros! Nosso software divulga seu link automaticamente e garante pelo menos 5 vendas. Sem complicação, sem risco!</p>
+            <a href="https://go.disruptybr.com.br/hnxstpmkaw" class="cta-button">QUERO GARANTIR MINHAS VENDAS AGORA!</a>
+            <div class="guarantee-badge">
+                ⚡ GARANTIA DE 5 VENDAS OU SEU DINHEIRO DE VOLTA!
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Por que escolher o Divulga Links Kiwify?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Sem Anúncios Pagos</h3>
+                    <p>Não precisa gastar fortunas com Facebook Ads ou Google Ads. Nosso sistema faz a divulgação para você.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>Resultados Rápidos</h3>
+                    <p>Comece a receber vendas em poucas horas após a ativação do sistema.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Garantia de Resultado</h3>
+                    <p>Se não alcançar pelo menos 5 vendas, devolvemos cada centavo do seu investimento.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Fácil de Usar</h3>
+                    <p>Basta inserir seu link da Kiwify e nosso sistema faz todo o trabalho pesado para você.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Como funciona?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Você compra o sistema</h3>
+                    <p>Clique no botão de compra e adquira por apenas R$ 15,00</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Insira seu link</h3>
+                    <p>Você receberá acesso ao sistema onde poderá inserir seu link da Kiwify</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Ative o sistema</h3>
+                    <p>Nosso software começará a divulgar seu link automaticamente</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Receba as vendas</h3>
+                    <p>Em pouco tempo você começará a receber as vendas garantidas!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O que nossos clientes dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Comprei sem acreditar muito, mas precisei parar de trabalhar para responder tantos pedidos! Em 2 dias já tinha mais de 10 vendas!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div>
+                            <strong>Marcos Silva</strong>
+                            <p>Produtor de conteúdo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Finalmente parei de gastar com tráfego pago! Esse sistema me trouxe resultados reais com investimento mínimo. Recomendo demais!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <strong>Amanda Costa</strong>
+                            <p>Empreendedora digital</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"A garantia me deixou seguro para testar. Resultado? Superou expectativas! Já estou no segundo pacote para outro produto."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div>
+                            <strong>Ricardo Almeida</strong>
+                            <p>Infoprodutor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo leva para começar a receber as vendas? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Os resultados começam a aparecer em poucas horas, mas o prazo máximo para atingir as 5 vendas garantidas é de 7 dias.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Preciso ter conhecimento técnico para usar? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não! Nosso sistema foi desenvolvido para ser extremamente simples. Basta inserir seu link da Kiwify e clicar em iniciar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como funciona a garantia? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Se em até 7 dias você não receber pelo menos 5 vendas através do nosso sistema, devolvemos 100% do seu dinheiro. Basta nos enviar um e-mail.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Preciso pagar algo adicional? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não! O valor de R$ 15,00 é único e definitivo. Não há mensalidades nem custos adicionais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Pronto para impulsionar suas vendas?</h2>
+            <p>Não perca mais tempo e dinheiro com métodos ultrapassados. Nosso sistema já ajudou centenas de produtores a aumentarem suas vendas sem complicação.</p>
+            <a href="https://go.disruptybr.com.br/hnxstpmkaw" class="cta-button">QUERO GARANTIR MINHAS 5 VENDAS!</a>
+            <p class="guarantee-badge">⚡ OFERTA POR TEMPO LIMITADO!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2023 Divulga Links Kiwify. Todos os direitos reservados.</p>
+            <p>Este produto não é afiliado à Kiwify, mas é destinado a produtores que utilizam a plataforma.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('faq-active');
+                
+                // Altera o sinal de + para - quando aberto
+                const span = question.querySelector('span');
+                span.textContent = item.classList.contains('faq-active') ? '-' : '+';
+            });
+        });
+
+        // Contador regressivo para criar urgência
+        function createCountdown() {
+            const countdownElement = document.createElement('div');
+            countdownElement.style.background = 'linear-gradient(to right, #ff4e00, #ff0080)';
+            countdownElement.style.color = 'white';
+            countdownElement.style.padding = '15px';
+            countdownElement.style.textAlign = 'center';
+            countdownElement.style.fontWeight = '700';
+            countdownElement.style.fontSize = '1.2rem';
+            countdownElement.style.boxShadow = '0 3px 10px rgba(0,0,0,0.2)';
+            countdownElement.innerHTML = '🚨 OFERTA RELÂMPAGO: Esta promoção expira em <span id="countdown-timer">15:00</span>! 🚨';
+            
+            document.body.prepend(countdownElement);
+            
+            let timeLeft = 15 * 60; // 15 minutos em segundos
+            const countdownTimer = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(countdownTimer);
+                    countdownElement.innerHTML = '⏰ TEMPO ESGOTADO! A promoção encerrou!';
+                } else {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    document.getElementById('countdown-timer').textContent = 
+                        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+
+        // Inicia o contador quando a página carrega
+        window.addEventListener('load', createCountdown);
+    </script>
+</body>
+</html>
